@@ -1,0 +1,705 @@
+/* Basic reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
+
+:root{
+  --green:#0276d4;
+  --muted:#707070;
+  --max-width:1200px;
+}
+
+/* Global: gunakan font formal dan pastikan background putih */
+body {
+font-family: "Times New Roman", Times, serif;
+color:#111;
+line-height:1.45;
+background:#ffffff; /* pastikan putih */
+-webkit-font-smoothing:antialiased;
+}
+
+/* NAVBAR — visual-only styling to match attachment */
+.navbar {
+position: sticky;
+top: 0;
+z-index: 999;
+background: #ffffff; /* putih */
+border-bottom: 1px solid rgba(0,0,0,0.06); /* garis halus */
+padding: 18px 40px;
+/* make container full width but center content */
+width: 100%;
+box-sizing: border-box;
+}
+
+/* Container inside navbar keeps max width */
+.nav-middle {
+max-width: var(--max-width);
+margin: 0 auto;
+position: relative;
+height: 56px; /* keeps header compact */
+}
+
+/* Logo pinned to the left */
+.logo {
+position: absolute;
+left: 20px;
+top: 50%;
+transform: translateY(-50%);
+font-size: 36px; /* large text like attachment */
+font-weight: 700;
+letter-spacing: 1px;
+color: #111;
+line-height: 1;
+}
+
+/* If logo uses an image, keep it constrained but don't overflow */
+.logo img {
+display: block;
+height: 48px;
+width: auto;
+}
+
+/* Center the nav links */
+.nav-links {
+display: flex;
+gap: 48px;
+justify-content: center;
+align-items: center;
+height: 56px;
+margin: 0 auto;
+}
+
+/* Visual style for links */
+.nav-links a {
+margin: 0;
+text-decoration: none;
+color: #111;
+font-size: 18px;
+font-weight: 600;
+line-height: 1;
+padding: 6px 4px;
+}
+
+/* CTA pinned to the right, pill-shaped */
+header .cta {
+position: absolute;
+right: 20px;
+top: 50%;
+transform: translateY(-50%);
+background: var(--green);
+color: #fff;
+border: none;
+padding: 12px 24px;
+font-size: 18px;
+font-weight: 300;
+border-radius: 20px;
+box-shadow: none;
+cursor: pointer;
+display: inline-flex;
+align-items: center;
+gap: 8px;
+}
+
+/* Optional small arrow inside CTA (appearance only) */
+header .cta::after {
+content: '↗';
+font-size: 13px;
+opacity: 0.95;
+}
+
+/* Responsive tweaks keep layout tidy on small screens */
+@media (max-width: 720px) {
+.logo { left: 12px; font-size: 24px; }
+.logo img { height: 36px; }
+.nav-links { display: none; } /* keep original behavior on small screens */
+header .cta { position: static; transform: none; margin-left: auto; }
+.nav-middle { height: auto; padding: 8px 0; }
+}
+
+/* HERO */
+/* --- Hero: center title over image + full-bleed image (visual only) --- */
+.hero {
+position: relative; /* buat container referensi untuk positioning title */
+padding: 20px 0 20px; /* atur jarak atas/bawah tetap rapi */
+overflow: visible;
+}
+
+.hero-title{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 2;
+width: 50%;
+max-width: var(--max-width);
+padding: 0 20px;
+text-align: center;
+color: #fff;
+text-shadow: 0 6px 18px rgba(0,0,0,0.45);
+font-size: 62px;
+line-height: 0.9;
+letter-spacing: 1px;
+margin-bottom: 0;
+}
+
+.hero-frame{
+width: 100vw; /* full viewport width */
+max-width: none; /* batalkan max-width agar full-bleed */
+margin-left: calc(50% - 50vw);/* pusatkan full-bleed */
+margin-right: calc(50% - 50vw);
+border-radius: 0; /* biar tidak memotong sisi full-bleed */
+overflow: hidden;
+box-shadow: 0 6px 30px rgba(0,0,0,0.07);
+background:#e9e9e9;
+}
+
+.hero-frame img{ width:100%; height:420px; object-fit:cover; display:block; }
+
+/* Trust logos */
+.trusted{ margin-top:18px; color:var(--muted); font-size:13px; text-align:left; max-width:var(--max-width); margin-left:auto; margin-right:auto; padding-left:10px; }
+.trust-logos{ display:flex; gap:36px; justify-content:center; align-items:center; opacity:.6; padding:18px 10px; }
+
+/* Sections */
+.section{ max-width:var(--max-width); margin:56px auto; padding:0 20px; }
+.kicker{ color:var(--muted); font-size:13px; display:block; margin-bottom:8px; }
+.section h2{ font-size:34px; margin-bottom:8px; }
+.lead{ color:var(--muted); margin-bottom:16px; }
+
+/* Features grid */
+.features{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-top:22px; }
+.feature h4{ font-size:16px; margin-bottom:8px; }
+.feature p{ color:var(--muted); font-size:14px; }
+
+/* Big picture */
+.big-picture{ display:flex; gap:28px; align-items:center; flex-wrap:wrap; }
+.big-picture .left{ flex:1 1 420px; }
+.big-picture .right{ flex:0 0 480px; }
+.card-img{ border-radius:14px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.06); }
+.card-img img{ width:100%; height:320px; object-fit:cover; display:block; }
+
+/* Choose */
+.choose{ text-align:center; padding:40px 20px; }
+
+/* Testimonial area */
+.testimonial{ display:flex; gap:30px; align-items:center; flex-wrap:wrap; }
+.t-image img{ width:420px; height:320px; object-fit:cover; border-radius:14px; }
+.t-quote{ font-style:italic; color:#222; max-width:640px; }
+
+/* Success steps */
+.success .s-head{ display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; }
+.steps{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:22px; }
+.step{ background:#fafafa; border-radius:10px; padding:18px; text-align:center; }
+.step h3{ font-size:28px; color:#bbb; margin-bottom:8px; }
+
+/* Contact */
+.contact{ text-align:center; padding-top:40px; }
+.contact-image img{ width:100%; max-height:320px; object-fit:cover; border-radius:14px; margin-bottom:18px; }
+
+/* Footer */
+.site-footer{ display:flex; justify-content:space-between; align-items:center; padding:22px; border-top:1px solid #f0f0f0; opacity:.85; max-width:var(--max-width); margin:40px auto 20px; }
+
+/* ===== Hero: condensed large left title + full-bleed image (added by assistant) ===== */
+/* If you want the exact Google font, add the <link> suggested below into index.html head */
+.hero {
+  position: relative;
+  padding: 20px 0 20px;
+  overflow: visible;
+}
+
+/* full-bleed image container (ke tepi viewport) */
+.hero-frame{
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.07);
+  background:#e9e9e9;
+}
+.hero-frame img{
+  width: 100%;
+  height: 420px;       /* pertahankan tinggi atas/bawah; ubah jika perlu */
+  object-fit: cover;
+  display: block;
+}
+
+/* Judul besar: condensed, uppercase, merah, di kiri-tengah gambar */
+.hero-title{
+  position: absolute;
+  top: 50%;                 /* center vertikal */
+  left: 6%;                 /* jarak dari tepi kiri seperti contoh */
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 40%;               /* area lebar untuk teks */
+  text-align: left;
+  margin: 0;
+  /* condensed look: prefer Google font 'Anton'. Fallback ke Impact/Arial Narrow */
+  font-family: 'Anton', 'Impact', 'Arial Narrow', sans-serif;
+  font-weight: 400;
+  font-size: 160px;         /* sangat besar, sesuai contoh; adjust if necessary */
+  line-height: 0.9;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #d9d9d9;           /* merah kuat */
+  text-shadow: none;
+  pointer-events: none;
+}
+
+/* Optional subtitle area (under the big title, left aligned) */
+.hero .subtitle {
+  position: absolute;
+  top: calc(50% + 72px);
+  left: 6%;
+  width: 40%;
+  text-align: left;
+  color: rgba(0,0,0,0.75);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* Responsive tweaks */
+@media (max-width: 1200px) {
+  .hero-title { font-size: 120px; width: 44%; }
+  .hero .subtitle { top: calc(50% + 60px); }
+}
+@media (max-width: 900px) {
+  .hero-frame img { height: 360px; }
+  .hero-title { font-size: 72px; width: 56%; left: 5%; }
+  .hero .subtitle { font-size: 16px; width: 56%; top: calc(50% + 44px); }
+}
+@media (max-width: 420px) {
+  .hero-frame img { height: 240px; }
+  .hero-title { font-size: 36px; width: 80%; left: 6%; line-height:0.95; }
+  .hero .subtitle { font-size:14px; top: calc(50% + 28px); width: 80%; }
+}
+
+/* ===== end of assistant-inserted block ===== */
+
+/* ===== assistant: constrain hero title to image height ===== */
+@media (min-width: 421px) {
+  /* pastikan container hero set ke tinggi gambar sehingga posisi center bekerja */
+  .hero {
+    min-height: 420px; /* samakan dengan tinggi gambar di .hero-frame img */
+    display: block;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  /* pastikan gambar dan container selalu sama tinggi */
+  .hero-frame img {
+    height: 420px;
+    object-fit: cover;
+  }
+
+  /* batasi ukuran font agar tidak melebihi tinggi gambar */
+  .hero-title {
+    /* font-size responsif: tidak pernah lebih besar dari 120px di layar besar */
+    font-size: clamp(28px, 6.5vw, 120px);
+    max-width: 42%;        /* jangan ambil lebih dari area gambar horizontal */
+    max-height: 80%;       /* pastikan tinggi teks tidak melebihi gambar */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* batasi jumlah baris jika perlu (sesuaikan) */
+    line-clamp: 5;         /* standard property */
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    line-height: 0.9;
+    word-break: break-word;
+  }
+}
+
+/* kecilkan lebih agresif pada layar sempit */
+@media (max-width: 420px) {
+  .hero { min-height: 240px; }
+  .hero-frame img { height: 240px; }
+  .hero-title {
+    font-size: clamp(18px, 6vw, 36px);
+    max-width: 80%;
+    -webkit-line-clamp: 3;
+     line-clamp: 3;
+  }
+}
+/* ===== end assistant block ===== */
+
+/* Multiline clamp (3 lines) */
+.clamped {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  /* WebKit prefixed (widely used) */
+  -webkit-line-clamp: 3;
+
+  /* Standard property for newer browsers that implement the spec */
+  line-clamp: 3;
+}
+
+/* RESPONSIVE */
+@media (max-width:1000px){
+  .features{ grid-template-columns:repeat(2,1fr); }
+  .hero-frame img{ height:360px; }
+  .t-image img{ width:100%; max-width:480px; }
+}
+@media (max-width:720px){
+  .nav-links{ display:none; }
+  .hero-title{ font-size:40px; }
+  .features{ grid-template-columns:1fr; }
+  .big-picture .right{ flex-basis:100%; }
+  .big-picture .left{ flex-basis:100%; }
+  .steps{ grid-template-columns:1fr; }
+}
+
+/* Ensure nav-links are visually centered between logo (left) and CTA (right)
+   when the page is NOT scrolled. This keeps logo and CTA in their corners
+   while the links sit exactly in the middle of the header. */
+.navbar .nav-middle { position: relative; }
+.navbar .nav-links {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+/* On small screens revert to original flow so links remain usable */
+@media (max-width: 720px) {
+  .navbar .nav-links {
+    position: static;
+    transform: none;
+    left: auto;
+    top: auto;
+    display: none; /* keep current behavior of hiding nav-links on mobile */
+  }
+}
+
+/* ===== navbar: style when scrolled (assistant-inserted) ===== */
+/* This block only affects visual appearance when .navbar has .scrolled */
+.navbar.scrolled {
+  position: fixed;               /* float above content */
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2000;
+  width: auto;
+  max-width: 720px;              /* keeps pill reasonably wide on large screens */
+  background: rgba(255,255,255,0.86); /* translucent white like attachment */
+  padding: 10px 28px;
+  border-radius: 40px;           /* pill shape */
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  backdrop-filter: blur(6px);    /* soft blur behind pill (optional) */
+  -webkit-backdrop-filter: blur(6px);
+  transition: all 240ms ease;
+}
+
+/* center nav-links inside the pill and reduce gaps */
+.navbar.scrolled .nav-middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  height: auto;
+}
+
+/* make logo smaller when pill is active (like example) */
+.navbar.scrolled .logo,
+.navbar.scrolled .logo img {
+  font-size: 20px;
+  height: 36px;
+  line-height: 1;
+}
+
+/* nav links visual inside pill */
+.navbar.scrolled .nav-links {
+  display:flex;
+  gap: 28px;
+  align-items:center;
+}
+
+/* slightly increase link contrast/weight for readability */
+.navbar.scrolled .nav-links a {
+  color: #111;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 6px 8px;
+}
+
+/* ensure CTA sits nicely inside pill */
+.navbar.scrolled header .cta,
+.navbar.scrolled .cta,
+.navbar.scrolled #btn-header-cta {
+  position: static;
+  transform: none;
+  margin-left: 18px;
+  padding: 10px 18px;
+  font-size: 15px;
+  border-radius: 28px;
+}
+
+/* Hide original bottom border while pill is active (if present) */
+.navbar.scrolled {
+  border-bottom: none;
+}
+
+/* Responsive tweaks: on small screens keep top sticky behavior and avoid overlap */
+@media (max-width: 720px) {
+  .navbar.scrolled {
+    position: sticky;
+    top: 0;
+    transform: none;
+    left: 0;
+    width: 100%;
+    max-width: none;
+    border-radius: 0;
+    padding: 8px 12px;
+    background: #ffffff; /* keep solid on tiny screens */
+    backdrop-filter: none;
+  }
+  .navbar.scrolled .nav-links { gap: 12px; }
+  .navbar.scrolled .logo img { height: 32px; }
+}
+ /* ===== end assistant-inserted navbar styling ===== */
+
+/* ===== assistant: pin logo (left) and CTA (right) Corners ===== */
+
+/* make sure navbar acts as relative container for absolute children */
+.navbar {
+  position: relative;
+}
+
+/* logo pinned to left corner of the header */
+.navbar .logo {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2500;
+  background: transparent;
+  padding: 0;
+}
+
+/* ensure image logo doesn't overflow */
+.navbar .logo img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+/* CTA (Learn More) pinned to right corner */
+.navbar .cta,
+.navbar #btn-header-cta {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2500;
+  margin: 0;
+  padding: 10px 18px;
+  border-radius: 28px;
+}
+
+/* When nav-links become the floating pill, ensure they are centered and do not move logo/CTA */
+.nav-links.scrolled,
+.navbar.scrolled .nav-links {
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  position: fixed;
+  top: 18px;
+  z-index: 2400;
+}
+
+/* small screen fallback: keep normal flow */
+@media (max-width: 720px) {
+  .navbar .logo { left: 12px; }
+  .navbar .logo img { height: 36px; }
+  .navbar .cta, .navbar #btn-header-cta { right: 12px; }
+  .nav-links.scrolled { position: static; transform: none; top: auto; left: auto; }
+}
+
+/* ===== end assistant block ===== */
+
+/* ===== assistant: keep logo and CTA outside the scrolled pill ===== */
+/* Make the scrolled navbar act as a container only; style the nav-links as the pill */
+.navbar.scrolled {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2000;
+  width: 100%;
+  max-width: none;
+  background: transparent; /* base is transparent so logo/cta remain visible outside */
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+  transition: all 220ms ease;
+}
+
+/* Style nav-links to look like the centered pill while keeping logo and CTA outside */
+.navbar.scrolled .nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255,255,255,0.92);
+  padding: 10px 28px;
+  border-radius: 40px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  z-index: 2001;
+  max-width: 720px;
+}
+
+/* Logo stays pinned to the left, outside the pill */
+.navbar.scrolled .logo {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2002;
+  background: transparent;
+  padding: 0;
+}
+
+/* If using an image logo, keep its size */
+.navbar.scrolled .logo img {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
+/* CTA (Learn More) stays pinned to the right, outside the pill */
+.navbar.scrolled .cta,
+.navbar.scrolled #btn-header-cta {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2002;
+  margin: 0;
+  background: var(--green);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 28px;
+  font-size: 15px;
+}
+
+/* ensure nav-links text style inside pill */
+.navbar.scrolled .nav-links a {
+  color: #111;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 6px 4px;
+}
+
+/* Responsive: on small screens, fallback to full-width sticky bar */
+@media (max-width: 720px) {
+  .navbar.scrolled {
+    position: sticky;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    background: #fff;
+    padding: 8px 12px;
+  }
+  .navbar.scrolled .nav-links {
+    position: static;
+    transform: none;
+    background: transparent;
+    padding: 0;
+    gap: 12px;
+    box-shadow: none;
+    display: none; /* keep original behavior (hidden) on small screens if desired) */
+  }
+  .navbar.scrolled .logo img { height: 32px; }
+  .navbar.scrolled .cta { position: static; transform: none; margin-left: auto; }
+}
+ /* ===== end assistant override ===== */
+
+/* ===== assistant: keep only center nav floating; logo & CTA stay put ===== */
+/* Neutralize any previous .navbar.scrolled visual rules so header doesn't move */
+.navbar.scrolled {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  width: 100% !important;
+  max-width: var(--max-width) !important;
+  background: transparent !important;
+  padding: 18px 28px !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* The center nav (nav-links) becomes the floating pill */
+.nav-links.scrolled {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2200;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  background: rgba(255,255,255,0.92);
+  padding: 10px 28px;
+  border-radius: 40px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  max-width: 720px;
+  width: auto;
+  justify-content: center;
+}
+
+/* ensure link visuals inside pill are correct */
+.nav-links.scrolled a {
+  color: #111;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 6px 4px;
+}
+
+/* Keep the logo fixed in its original place (left) and CTA at right */
+.navbar .logo {
+  position: relative; /* remain in header flow */
+  left: 0;
+  top: 0;
+  transform: none;
+  z-index: 2300;
+}
+.navbar .cta,
+#btn-header-cta {
+  position: relative; /* keep in header flow, right-side via existing layout */
+  right: 0;
+  top: 0;
+  transform: none;
+  z-index: 2300;
+}
+
+/* Small screens: don't float the pill (fallback to original behavior) */
+@media (max-width: 720px) {
+  .nav-links.scrolled {
+    position: static;
+    transform: none;
+    top: auto;
+    left: auto;
+    width: 100%;
+    max-width: none;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+}
+ /* ===== end assistant block ===== */

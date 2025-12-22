@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>STTA — Animated</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- ================= HELP WIDGET ================= -->
+<div class="help-widget">
+  <div class="help-menu" id="helpMenu">
+    <a href="https://wa.me/6282122481379?text=Halo%20STTA,%20saya%20ingin%20konsultasi%20pengadaan%20barang%20dan%20spare%20part." target="_blank" class="help-item">
+      <span class="icon">💬</span>
+      <span class="text">WhatsApp</span>
+    </a>
+    <a href="mailto:rifkideo28@gmail.com" class="help-item">
+      <span class="icon">✉️</span>
+      <span class="text">Kirim Email</span>
+    </a>
+  </div>
+
+  <button class="help-button" id="helpToggle">💬</button>
+</div>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <div class="nav-middle">
+
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="logo.png" alt="STTA logo" />
+    </div>
+
+    <!-- HAMBURGER (MOBILE ONLY) -->
+    <button class="nav-toggle" aria-label="Open Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- DESKTOP NAV -->
+    <nav class="nav-links">
+      <div class="nav-item"><a href="index.html">Home</a></div>
+
+      <div class="nav-item dropdown-parent">
+        <a href="#" class="dropdown-toggle">About</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="aboutus.html">About Us</a>
+          <a class="dropdown-item" href="akreditas.html">Accreditation</a>
+          <a class="dropdown-item" href="kebijakan.html">Company Policy</a>
+        </div>
+      </div>
+
+      <div class="nav-item dropdown-parent">
+        <a href="#" class="dropdown-toggle">Services</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="maintenance-trafo.html">Maintenance Trafo</a>
+          <a class="dropdown-item" href="install.html">Installation Trafo</a>
+          <a class="dropdown-item" href="panellv.html">Maintenance Panel LV</a>
+          <a class="dropdown-item" href="panelmv.html">Maintenance Panel MV</a>
+          <a class="dropdown-item" href="pengadaan.html">Installation Spare Part</a>
+        </div>
+      </div>
+
+      <div class="nav-item"><a href="produk.html">Products</a></div>
+    </nav>
+  </div>
+
+  <!-- CTA DESKTOP -->
+  <button class="cta" onclick="location.href='https://wa.me/6282122481379?text=Halo%20STTA,%20saya%20ingin%20konsultasi%20pengadaan%20barang%20dan%20spare%20part.'">
+    Hubungi Kami
+  </button>
+</header>
+
+<!-- ================= MOBILE FULLSCREEN MENU ================= -->
+<nav class="mobile-menu">
+  <button class="mobile-close" aria-label="Close Menu">✕</button>
+
+  <ul class="mobile-nav">
+    <li class="mobile-link active"><a href="index.html">Home</a></li>
+
+    <li class="mobile-dropdown">
+      <button class="dropdown-btn">
+        About <span class="arrow">⌄</span>
+      </button>
+      <ul class="dropdown-list">
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="akreditas.html">Accreditation</a></li>
+        <li><a href="kebijakan.html">Company Policy</a></li>
+      </ul>
+    </li>
+
+    <li class="mobile-dropdown">
+      <button class="dropdown-btn">
+        Services <span class="arrow">⌄</span>
+      </button>
+      <ul class="dropdown-list">
+        <li><a href="maintenance-trafo.html">Maintenance Trafo</a></li>
+        <li><a href="install.html">Installation Trafo</a></li>
+        <li><a href="panellv.html">Maintenance Panel LV</a></li>
+        <li><a href="panelmv.html">Maintenance Panel MV</a></li>
+        <li><a href="pengadaan.html">Pengadaan Barang & Spare Part</a></li>
+      </ul>
+    </li>
+
+    <li class="mobile-link"><a href="produk.html">Products</a></li>
+    <li class="mobile-link"><a href="https://wa.me/6282122481379?text=Halo%20STTA,%20saya%20ingin%20konsultasi%20pengadaan%20barang%20dan%20spare%20part.">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="page-hero modern-hero">
+  <div class="hero-content">
+    <h1>Maintenance Panel LV<br><span>Stabil • Aman • Efisien</span></h1>
+    <p>
+       Layanan maintenance Panel Low Voltage (LV)
+    untuk menjaga keandalan distribusi listrik,
+    mencegah gangguan, serta meningkatkan keselamatan
+    dan umur peralatan.
+    </p>
+
+    <div class="hero-actions">
+      <a href="https://wa.me/6282122481379?text=Halo%20STTA,%20saya%20ingin%20konsultasi%20pengadaan%20barang%20dan%20spare%20part." class="btn-primary">Konsultasi Proyek</a>
+      <a href="#layanan" class="btn-outline">Lihat Layanan</a>
+    </div>
+  </div>
+</section>
+
+<style>
+body{
+  font-family:Poppins,sans-serif;
+  margin:0;
+  background:#fff;
+  color:#0f172a;
+}
+
+/* ===== HERO ===== */
+.modern-hero {
+  padding:140px 8% 120px;
+  background:
+    linear-gradient(135deg, rgba(0,32,211,.95), rgba(2,20,50,.85)),
+    url("pemasangan-trafo-hero.jpg") center/cover no-repeat;
+  color:#fff;
+}
+
+.modern-hero h1 {
+  font-size:52px;
+  line-height:1.15;
+  margin-bottom:20px;
+}
+
+.modern-hero h1 span {
+  color:#c7d2fe;
+}
+
+.modern-hero p {
+  max-width:620px;
+  font-size:17px;
+  opacity:.95;
+  margin-bottom:32px;
+}
+
+.hero-actions {
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.btn-primary {
+  background:#fff;
+  color:#0020d3;
+  padding:14px 28px;
+  border-radius:40px;
+  font-weight:600;
+}
+
+.btn-outline {
+  border:1.5px solid #fff;
+  color:#fff;
+  padding:14px 28px;
+  border-radius:40px;
+}
+
+/* ===== SECTION ===== */
+.section{
+  padding:100px 8%;
+}
+.section.gray{background:#f1f5f9}
+.section h2{
+  font-size:36px;
+  margin-bottom:24px;
+}
+
+/* ===== INTRO ===== */
+.intro-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:60px;
+}
+.intro-box{
+  background:#f8fafc;
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,.06);
+}
+.intro-box li{margin-bottom:10px}
+
+/* ===== SERVICES ===== */
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+}
+.service{
+  position:relative;
+  border-radius:5px;
+  overflow:hidden;
+  min-height:360px;
+  box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+.service::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(2,20,50,.15),rgba(3, 31, 78, 0.9));
+}
+.service img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.service-content{
+  position:absolute;
+  bottom:0;
+  padding:32px;
+  color:#fff;
+}
+.service h4{
+  font-size:20px;
+  margin-bottom:10px;
+}
+.service p{
+  font-size:14.5px;
+  line-height:1.7;
+  opacity:.95;
+}
+
+/* ===== CTA ===== */
+.cta-section{
+  padding:100px 8%;
+  text-align:center;
+  background:linear-gradient(135deg,#0020d3,#021432);
+  color:#fff;
+}
+.cta-section h2{
+  font-size:36px;
+  margin-bottom:20px;
+}
+.cta-section a{
+  display:inline-block;
+  background:#fff;
+  color:#0020d3;
+  padding:14px 34px;
+  border-radius:40px;
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+  background:#020617;
+  color:#cbd5e1;
+  padding:80px 8% 40px;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:40px;
+}
+.footer h4{color:#fff;margin-bottom:16px}
+.footer a{color:#cbd5e1;text-decoration:none;display:block;margin-bottom:8px}
+.footer-map{
+  width:100%;
+  height:200px;
+  border-radius:14px;
+  overflow:hidden;
+}
+.footer-map iframe{width:100%;height:100%;border:0}
+.footer-bottom{
+  margin-top:40px;
+  padding-top:24px;
+  border-top:1px solid rgba(255,255,255,.1);
+  text-align:center;
+  font-size:13px;
+  color:#94a3b8;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:900px){
+  .hero h1{font-size:38px}
+  .intro-grid{grid-template-columns:1fr}
+  .service-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== INTRO ===== -->
+<section class="section">
+  <div class="intro-grid">
+    <div>
+      <h2>Layanan Maintenance Panel LV</h2>
+      <p>
+        Panel LV merupakan bagian vital dalam
+        sistem distribusi listrik bangunan,
+        pabrik, dan fasilitas industri.
+        Gangguan kecil pada panel LV dapat
+        berdampak besar pada operasional.
+      </p>
+      <p>
+        PT. Surya Terang Teknik Abadi menyediakan
+        layanan maintenance Panel LV secara
+        menyeluruh dengan pendekatan teknis,
+        terukur, dan sesuai standar keselamatan.
+      </p>
+    </div>
+    <div class="intro-box">
+      <h4>Ruang Lingkup Pekerjaan</h4>
+      <ul>
+        <li>✔ Tightening & Inspection</li>
+        <li>✔ Corona Check</li>
+        <li>✔ Test Relay</li>
+        <li>✔ Infra Red Thermography</li>
+        <li>✔ Penggantian & Pembuatan Panel LV</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="section gray">
+  <div class="service-grid">
+
+    <div class="service">
+      <img src="photo/thining.jpeg">
+      <div class="service-content">
+        <h4>Tightening</h4>
+        <p>
+          Pengencangan seluruh koneksi listrik
+          untuk mencegah panas berlebih,
+          percikan, dan kegagalan sistem.
+        </p>
+      </div>
+    </div>
+
+    <div class="service">
+      <img src="photo/coronalv.png">
+      <div class="service-content">
+        <h4>Corona Check</h4>
+        <p>
+          Deteksi dini gejala corona dan
+          degradasi isolasi yang berpotensi
+          menyebabkan gangguan listrik.
+        </p>
+      </div>
+    </div>
+
+    <div class="service">
+      <img src="photo/relay.png">
+      <div class="service-content">
+        <h4>Test Relay</h4>
+        <p>
+          Pengujian fungsi relay proteksi
+          untuk memastikan respon cepat
+          terhadap kondisi abnormal.
+        </p>
+      </div>
+    </div>
+
+    <div class="service">
+      <img src="photo/tesinfra.jpeg">
+      <div class="service-content">
+        <h4>Infra Red Thermography</h4>
+        <p>
+          Pemeriksaan suhu menggunakan
+          kamera infra merah untuk
+          mendeteksi hotspot secara akurat.
+        </p>
+      </div>
+    </div>
+
+    <div class="service">
+      <img src="photo/pergantian.png">
+      <div class="service-content">
+        <h4>Pergantian Spare Part</h4>
+        <p>
+          Penggantian komponen panel LV
+          yang mengalami penurunan performa
+          atau kerusakan.
+        </p>
+      </div>
+    </div>
+
+    <div class="service">
+      <img src="photo/panellv.jpeg">
+      <div class="service-content">
+        <h4>Pembuatan & Pemasangan Panel LV</h4>
+        <p>
+          Jasa pembuatan panel LV baru
+          serta pemasangan sesuai kebutuhan
+          dan standar instalasi kelistrikan.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-section">
+  <h2>Optimalkan Keandalan Panel LV Anda</h2>
+  <p>
+    Maintenance rutin Panel LV adalah investasi
+    untuk keselamatan dan kontinuitas operasional.
+  </p>
+  <br>
+  <a href="https://wa.me/6282122481379?text=Halo%20STTA,%20saya%20ingin%20konsultasi%20pengadaan%20barang%20dan%20spare%20part.">Hubungi Tim Kami</a>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+
+    <!-- ===== COMPANY INFO ===== -->
+    <div>
+      <img src="logo.png" alt="STTA" style="width:160px; margin-bottom:16px;">
+      <p>
+        PT. Surya Terang Teknik Abadi adalah perusahaan
+        jasa kelistrikan yang berfokus pada instalasi,
+        maintenance, dan solusi transformator
+        secara profesional dan terstandarisasi.
+      </p>
+    </div>
+
+    <!-- ===== SERVICES ===== -->
+     <div>
+      <h4>Layanan</h4>
+      <a href="maintenance-trafo.html">Maintenance Trafo</a>
+      <a href="install.html">Pemasangan Trafo</a>
+      <a href="panellv.html">Maintenance Panel LV</a>
+        <a href="panelmv.html">Maintenance Panel MV</a>
+        <a  href="pengadaan.html">Installation Spare Part</a>
+    </div>
+
+    <!-- ===== COMPANY ===== -->
+    <div>
+      <h4>Perusahaan</h4>
+      <a href="aboutus.html">Tentang Kami</a>
+      <a href="kebijakan.html">Kebijakan Perusahaan</a>
+    </div>
+
+    <!-- ===== MAP ===== -->
+    <div>
+      <h4>Lokasi Kami</h4>
+
+      <div class="footer-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d535.26297680914!2d106.59492255854433!3d-6.177382084407394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ff13a9921285%3A0xc071c1f2eff0c130!2sPt.Surya%20Terang%20Teknik%20Abadi!5e0!3m2!1sen!2sid!4v1766330745725!5m2!1sen!2sid"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+     <p style="margin-top:15px;">
+        📍 Tangerang, Indonesia<br>
+        <a href="https://wa.me/6282122481379?text=Halo%20STTA,%20saya%20ingin%20konsultasi%20pengadaan%20barang%20dan%20spare%20part." 
+   target="_blank">
+  📞 0815 1729 0000
+    </a>
+    <a href="mailto:rifkideo28@gmail.com
+        ?subject=Permintaan%20Penawaran%20Jasa%20Kelistrikan
+        &body=Halo%20PT.%20Surya%20Terang%20Teknik%20Abadi,%0A%0ASaya%20ingin%20konsultasi%20terkait%20layanan%20Maintenance%20Trafo.%0A%0ATerima%20kasih.">
+         ✉ stta@gmail.com
+    </a>
+    </p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 PT. Surya Terang Teknik Abadi. All rights reserved.
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

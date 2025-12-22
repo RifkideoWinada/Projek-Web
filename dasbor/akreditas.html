@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>STTA — Animated</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- ================= HELP WIDGET ================= -->
+<div class="help-widget">
+  <div class="help-menu" id="helpMenu">
+    <a href="https://wa.me/6282122481379?text=Halo%20STTA,%20saya%20ingin%20konsultasi%20pengadaan%20barang%20dan%20spare%20part." target="_blank" class="help-item">
+      <span class="icon">💬</span>
+      <span class="text">WhatsApp</span>
+    </a>
+    <a href="mailto:rifkideo28@gmail.com" class="help-item">
+      <span class="icon">✉️</span>
+      <span class="text">Kirim Email</span>
+    </a>
+  </div>
+
+  <button class="help-button" id="helpToggle">💬</button>
+</div>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <div class="nav-middle">
+
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="logo.png" alt="STTA logo" />
+    </div>
+
+    <!-- HAMBURGER (MOBILE ONLY) -->
+    <button class="nav-toggle" aria-label="Open Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- DESKTOP NAV -->
+    <nav class="nav-links">
+      <div class="nav-item"><a href="index.html">Home</a></div>
+
+      <div class="nav-item dropdown-parent">
+        <a href="#" class="dropdown-toggle">About</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="aboutus.html">About Us</a>
+          <a class="dropdown-item" href="akreditas.html">Accreditation</a>
+          <a class="dropdown-item" href="kebijakan.html">Company Policy</a>
+        </div>
+      </div>
+
+      <div class="nav-item dropdown-parent">
+        <a href="#" class="dropdown-toggle">Services</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="maintenance-trafo.html">Maintenance Trafo</a>
+          <a class="dropdown-item" href="install.html">Installation Trafo</a>
+          <a class="dropdown-item" href="panellv.html">Maintenance Panel LV</a>
+          <a class="dropdown-item" href="panelmv.html">Maintenance Panel MV</a>
+          <a class="dropdown-item" href="pengadaan.html">Installation Spare Part</a>
+        </div>
+      </div>
+
+      <div class="nav-item"><a href="produk.html">Products</a></div>
+    </nav>
+  </div>
+
+  <!-- CTA DESKTOP -->
+  <button class="cta" onclick="location.href='https://wa.me/6282122481379?text=Halo%20STTA,%20saya%20ingin%20konsultasi%20pengadaan%20barang%20dan%20spare%20part.'">
+    Hubungi Kami
+  </button>
+</header>
+
+<!-- ================= MOBILE FULLSCREEN MENU ================= -->
+<nav class="mobile-menu">
+  <button class="mobile-close" aria-label="Close Menu">✕</button>
+
+  <ul class="mobile-nav">
+    <li class="mobile-link active"><a href="index.html">Home</a></li>
+
+    <li class="mobile-dropdown">
+      <button class="dropdown-btn">
+        About <span class="arrow">⌄</span>
+      </button>
+      <ul class="dropdown-list">
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="akreditas.html">Accreditation</a></li>
+        <li><a href="kebijakan.html">Company Policy</a></li>
+      </ul>
+    </li>
+
+    <li class="mobile-dropdown">
+      <button class="dropdown-btn">
+        Services <span class="arrow">⌄</span>
+      </button>
+      <ul class="dropdown-list">
+        <li><a href="maintenance-trafo.html">Maintenance Trafo</a></li>
+        <li><a href="install.html">Installation Trafo</a></li>
+        <li><a href="panellv.html">Maintenance Panel LV</a></li>
+        <li><a href="panelmv.html">Maintenance Panel MV</a></li>
+        <li><a href="pengadaan.html">Pengadaan Barang & Spare Part</a></li>
+      </ul>
+    </li>
+
+    <li class="mobile-link"><a href="produk.html">Products</a></li>
+    <li class="mobile-link"><a href="https://wa.me/6282122481379?text=Halo%20STTA,%20saya%20ingin%20konsultasi%20pengadaan%20barang%20dan%20spare%20part.">Contact</a></li>
+  </ul>
+</nav>
+
+  <!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-grid">
+
+    <!-- ===== COMPANY INFO ===== -->
+    <div>
+      <img src="logo.png" alt="STTA" style="width:160px; margin-bottom:16px;">
+      <p>
+        PT. Surya Terang Teknik Abadi adalah perusahaan
+        jasa kelistrikan yang berfokus pada instalasi,
+        maintenance, dan solusi transformator
+        secara profesional dan terstandarisasi.
+      </p>
+    </div>
+
+    <!-- ===== SERVICES ===== -->
+    <div>
+      <h4>Layanan</h4>
+      <a href="maintenance-trafo.html">Maintenance Trafo</a>
+      <a href="install.html">Pemasangan Trafo</a>
+      <a href="panellv.html">Maintenance Panel LV</a>
+        <a href="panelmv.html">Maintenance Panel MV</a>
+        <a  href="pengadaan.html">Installation Spare Part</a>
+    </div>
+
+    <!-- ===== COMPANY ===== -->
+    <div>
+      <h4>Perusahaan</h4>
+      <a href="aboutus.html">Tentang Kami</a>
+      <a href="kebijakan.html">Kebijakan Perusahaan</a>
+    </div>
+
+    <!-- ===== MAP ===== -->
+    <div>
+      <h4>Lokasi Kami</h4>
+
+      <div class="footer-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d535.26297680914!2d106.59492255854433!3d-6.177382084407394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ff13a9921285%3A0xc071c1f2eff0c130!2sPt.Surya%20Terang%20Teknik%20Abadi!5e0!3m2!1sen!2sid!4v1766330745725!5m2!1sen!2sid"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+     <p style="margin-top:15px;">
+        📍 Tangerang, Indonesia<br>
+        <a href="https://wa.me/6282122481379?text=Halo%20STTA,%20saya%20ingin%20konsultasi%20pengadaan%20barang%20dan%20spare%20part." 
+   target="_blank">
+  📞 0815 1729 0000
+    </a>
+    <a href="mailto:rifkideo28@gmail.com
+        ?subject=Permintaan%20Penawaran%20Jasa%20Kelistrikan
+        &body=Halo%20PT.%20Surya%20Terang%20Teknik%20Abadi,%0A%0ASaya%20ingin%20konsultasi%20terkait%20layanan%20Maintenance%20Trafo.%0A%0ATerima%20kasih.">
+         ✉ stta@gmail.com
+    </a>
+    </p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 PT. Surya Terang Teknik Abadi. All rights reserved.
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

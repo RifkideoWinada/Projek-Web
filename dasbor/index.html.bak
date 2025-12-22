@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>STTA — Animated</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-middle">
+      <div class="logo">
+        <!-- ganti teks STTA menjadi gambar logo (taruh file logo.png di folder dasbor) -->
+        <img src="logo.png" alt="STTA logo" />
+      </div>
+      <nav class="nav-links">
+        <div class="nav-item"><a href="#" data-target="#benefits">Home</a></div>
+        <div class="nav-item dropdown-parent">
+          <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">About</a>
+           <div class="dropdown-menu" role="menu" aria-label="About submenu">
+            <a class="dropdown-item" href="aboutus.html">About Us</a>
+            <a class="dropdown-item" href="akreditas.html">Accreditation</a>
+            <a class="dropdown-item" href="kebijakan.html">Company Policy</a>
+            <a class="dropdown-item" href="lokasi.html">Location</a>
+          </div>
+        </div>
+        <div class="nav-item dropdown-parent">
+          <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Services</a>
+          <div class="dropdown-menu" role="menu" aria-label="Services submenu">
+            <a class="dropdown-item" href="#">Petroleum</a>
+            <a class="dropdown-item" href="#">Lubricant</a>
+            <a class="dropdown-item" href="#">Fuel</a>
+            <a class="dropdown-item" href="#">Transformer Oil</a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="produk.html" data-target="#contact">Products</a></div>
+      </nav>
+    </div>
+    <!-- tombol tetap di tempat, beri id agar bisa diarahkan -->
+    <button id="btn-header-cta" class="cta" data-target="#contact">Contact Us</button>
+  </header>
+
+  <main>
+    <!-- Add data-animate attributes on sections -->
+    <section id="benefits" class="hero" data-animate>
+      <h1 class="hero-title">SURYA TERANG<br />TEKNIK ABADI</h1>
+      <div class="hero-frame" data-animate>
+        <img src="hero1.png" alt="Machine" />
+      </div>
+        </section>
+
+    <!-- Big Picture -->
+    <section class="section big-picture" data-animate>
+      <div class="col left">
+        <h2>See the Big Picture</h2>
+        <ol>
+          <li>Spot Trends in Seconds</li>
+          <li>Get Everyone on the Same Page</li>
+          <li>Make Presentations Easy</li>
+          <li>Your Global Snapshot</li>
+        </ol>
+        <button class="cta small">Discover More</button>
+      </div>
+      <div class="col right" data-animate>
+        <div class="card-img"><img src="pic1.png" alt="Big picture" /></div>
+      </div>
+    </section>
+
+        <section id="specs" class="section code" data-animate>
+      <small class="kicker">New! 1.1</small>
+      <h2>We’ve cracked the code.</h2>
+      <p class="lead">Area provides real insights, without the data overload.</p>
+      <div class="features">
+        <article class="feature" data-animate><h4>Amplify Insights</h4><p>Unlock clean...</p></article>
+        <article class="feature" data-animate><h4>Control</h4><p>Manage offices...</p></article>
+        <article class="feature" data-animate><h4>Language</h4><p>Localization...</p></article>
+        <article class="feature" data-animate><h4>Visualize</h4><p>Generate reports...</p></article>
+      </div>
+    </section>
+
+    <!-- rest same as A: choose, testimonial, success, contact (add data-animate where needed) -->
+    <!-- choose -->
+    <section id="howto" class="section choose" data-animate>
+      <small>Signal</small>
+      <h2>Why Choose STTA?</h2>
+      <p>You need a solution that keeps up.</p>
+      <button class="cta small">Discover More</button>
+    </section>
+
+    <!-- testimonial -->
+    <section class="section testimonial" data-animate>
+      <div class="t-image" data-animate><img src="hero3.jpeg" alt="Team working" /></div>
+      <blockquote class="t-quote">“I was skeptical...”<footer>John Smith — Head of Data</footer></blockquote>
+    </section>
+
+    <!-- success -->
+    <section class="section success" data-animate>
+      <div class="s-head"><h2>Map Your Success</h2><button class="cta small">Discover More</button></div>
+      <div class="steps">
+        <div class="step" data-animate><h3>01</h3><h4>Get Started</h4></div>
+        <div class="step" data-animate><h3>02</h3><h4>Customize</h4></div>
+        <div class="step" data-animate><h3>03</h3><h4>Grow</h4></div>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section id="contact" class="section contact" data-animate>
+      <div class="contact-image" data-animate><img src="landscape.png" alt="Landscape" /></div>
+      <h2>Connect with us</h2>
+      <p>Schedule a quick call...</p>
+      <button class="cta">Learn More</button>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="trusted-wrap" style="text-align:center;">
+        <div class="trusted">Trusted by:</div>
+        <div class="trust-logos" data-animate>
+          <img src="client1.png" alt="Client 1 Logo"
+           style="width:96px; height:96px; object-fit:contain; display:block; padding:8px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.06); border:1px solid rgba(0,0,0,0.06); filter:none; background:transparent;" />
+          <img src="client2.png" alt="Client 2 Logo"
+           style="width:96px; height:96px; object-fit:contain; display:block; padding:8px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.06); border:1px solid rgba(0,0,0,0.06); filter:none; background:transparent;" />
+          <img src="client3.png" alt="Client 3 Logo"
+           style="width:96px; height:96px; object-fit:contain; display:block; padding:8px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.06); border:1px solid rgba(0,0,0,0.06); filter:none; background:transparent;" />
+          <img src="client4.png" alt="Client 4 Logo"
+           style="width:96px; height:96px; object-fit:contain; display:block; padding:8px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.06); border:1px solid rgba(0,0,0,0.06); filter:none; background:transparent;" />
+          <img src="client5.png" alt="Client 5 Logo"
+           style="width:96px; height:96px; object-fit:contain; display:block; padding:8px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.06); border:1px solid rgba(0,0,0,0.06); filter:none; background:transparent;" />
+          <img src="client6.png" alt="Client 6 Logo"
+           style="width:96px; height:96px; object-fit:contain; display:block; padding:8px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.06); border:1px solid rgba(0,0,0,0.06); filter:none; background:transparent;" />
+          <img src="client7.png" alt="Client 7 Logo"
+           style="width:96px; height:96px; object-fit:contain; display:block; padding:8px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.06); border:1px solid rgba(0,0,0,0.06); filter:none; background:transparent;" />
+          <img src="client8.png" alt="Client 8 Logo"
+           style="width:96px; height:96px; object-fit:contain; display:block; padding:8px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.06); border:1px solid rgba(0,0,0,0.06); filter:none; background:transparent;" />
+          <img src="client9.png" alt="Client 9 Logo"
+           style="width:96px; height:96px; object-fit:contain; display:block; padding:8px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.06); border:1px solid rgba(0,0,0,0.06); filter:none; background:transparent;" />
+          <img src="client10.png" alt="Client 10 Logo"
+           style="width:96px; height:96px; object-fit:contain; display:block; padding:8px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.06); border:1px solid rgba(0,0,0,0.06); filter:none; background:transparent;" />
+        </div>
+      </div>
+      </div>
+    <div class="footer-left"><a href="#">Benefits</a><a href="#">Specifications</a><a href="#">How-to</a></div>
+    <div class="footer-right"><small>© Area, 2025</small></div>
+  </footer>
+
+ 
